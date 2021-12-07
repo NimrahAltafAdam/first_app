@@ -159,7 +159,7 @@ void main() => runApp(MaterialApp(
 }*/
 
 //ICON BUTTON
-class Home extends StatelessWidget {
+/*class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override //to overide the build function inherited from stateless widget
@@ -178,6 +178,115 @@ class Home extends StatelessWidget {
           icon : Icon(Icons.alternate_email),
           color: Colors.amber
         )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+//LAYOUT WIDGET-CONTAINER + PADDING(ALL)
+/*class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Container(
+        padding: EdgeInsets.all(20.0),
+        color: Colors.grey[400],
+        child: Text('hello')
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+
+//PADDING(SYMMETRIC)
+
+/*class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          color: Colors.grey[400],
+          child: Text('hello')
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+
+
+//PADDING(LTRB)
+//MARGIN(ALL)
+
+/*class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Container(
+          padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+          margin: EdgeInsets.all(30.0),
+          color: Colors.grey[400],
+          child: Text('hello')
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+
+//PADDING WIDGET-IT IS USUALLY USED WITH TEXT AND WHEN A CONTAINER IS NOT REQUIRED
+//WE CAN NOT USE MARGIN OR COLOR PROPERTY IN A PADDING WIDGET
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(90.0),
+        child: Text('hello'),
       ),
       floatingActionButton: FloatingActionButton(
         child: Text('click'),
