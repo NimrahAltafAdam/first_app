@@ -273,7 +273,7 @@ void main() => runApp(MaterialApp(
 //PADDING WIDGET-IT IS USUALLY USED WITH TEXT AND WHEN A CONTAINER IS NOT REQUIRED
 //WE CAN NOT USE MARGIN OR COLOR PROPERTY IN A PADDING WIDGET
 
-class Home extends StatelessWidget {
+/*class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override //to overide the build function inherited from stateless widget
@@ -295,4 +295,44 @@ class Home extends StatelessWidget {
       ),
     );
   }
+}*/
+
+//ROW WIDGET
+//-mainAxisAlignment
+//-crossAxisAlignment
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('hello, world'),
+          FlatButton(onPressed: () {},
+              child: Text('click me'),
+              color: Colors.amber,
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('inside container')
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
 }
+
