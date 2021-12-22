@@ -300,7 +300,7 @@ void main() => runApp(MaterialApp(
 //ROW WIDGET
 //-mainAxisAlignment
 //-crossAxisAlignment
-class Home extends StatelessWidget {
+/*class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override //to overide the build function inherited from stateless widget
@@ -327,6 +327,108 @@ class Home extends StatelessWidget {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+
+
+//COLUMN
+/*class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row (
+            children: <Widget> [
+              Text('Hello,'),
+              Text('World'),
+            ],
+          ),
+          Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('Shoulders')
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('Head')
+          ),
+          Container(
+              padding: EdgeInsets.all(40.0),
+              color: Colors.teal,
+              child: Text('Knees')
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Text('click'),
+        onPressed: () {},
+        backgroundColor: Colors.red[600],
+      ),
+    );
+  }
+}*/
+
+//LEC #14 EXPANDED WIDGETS
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override //to overide the build function inherited from stateless widget
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title:Text('my first app'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Row(
+        children: <Widget> [
+          Expanded(
+              child: Image.asset('assets/tree.jpg'),
+            flex: 8
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+                padding: EdgeInsets.all(40.0),
+                color: Colors.teal,
+                child: Text('1')
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+                padding: EdgeInsets.all(40.0),
+                color: Colors.pinkAccent,
+                child: Text('2')
+            ),
+          ),
+          Expanded(
+            flex: 5,
+            child: Container(
+                padding: EdgeInsets.all(40.0),
+                color: Colors.amberAccent,
+                child: Text('3')
+            ),
+          )
+        ],
+      ) ,
       floatingActionButton: FloatingActionButton(
         child: Text('click'),
         onPressed: () {},
